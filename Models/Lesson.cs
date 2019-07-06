@@ -9,7 +9,9 @@ namespace cloudrest.Models
     [DataContract]
     public class Lesson
     {
+        [DataMember(Name ="id")]
         public int Id { get; set; }
+        [DataMember(Name ="title")]
         public string Title { get; set; }
     }
 }
