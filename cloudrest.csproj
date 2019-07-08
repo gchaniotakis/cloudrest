@@ -170,11 +170,12 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ApiControllers\LessonController.cs" />
     <Compile Include="Controllers\ApiControllers\SelectionController.cs" />
     <Compile Include="Controllers\ApiControllers\UserController.cs" />
-    <Compile Include="Controllers\ValuesController.cs" />
+    <Compile Include="Controllers\LessonController.cs" />
+    <Compile Include="Controllers\SelectionController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Dtos\LessonDto.cs" />
     <Compile Include="Dtos\SelectionDto.cs" />
     <Compile Include="Dtos\UserDto.cs" />
@@ -303,6 +304,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Lesson\" />
+    <Folder Include="Views\Selection\" />
+    <Folder Include="Views\User\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

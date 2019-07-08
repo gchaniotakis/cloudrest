@@ -8,7 +8,7 @@ using AutoMapper;
 using cloudrest.Dtos;
 using cloudrest.Models;
 
-namespace cloudrest.Controllers
+namespace cloudrest.Controllers.ApiControllers
 {
     public class SelectionController : ApiController
     {
