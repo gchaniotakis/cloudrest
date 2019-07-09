@@ -173,6 +173,7 @@
     <Compile Include="Controllers\ApiControllers\LessonController.cs" />
     <Compile Include="Controllers\ApiControllers\SelectionController.cs" />
     <Compile Include="Controllers\ApiControllers\UserController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LessonController.cs" />
     <Compile Include="Controllers\SelectionController.cs" />
     <Compile Include="Controllers\UserController.cs" />
