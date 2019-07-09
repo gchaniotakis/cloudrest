@@ -10,18 +10,7 @@
     @Html.ActionLink("Create New", "Create", null, new { @class = "btn btn-primary"})
 </p>
 
-<div class="container">
-    <div class="row">
-        @using(Html.BeginForm("Index", "User",FormMethod.Get))
-        {
-        <p>
-            @Html.TextBox("Searching...")
-            <button class="btn-info" type="submit">Search</button>
-        </p>
 
-        }
-    </div>
-</div>
 
 <table class="table">
     <tr>
