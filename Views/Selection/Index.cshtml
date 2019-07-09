@@ -1,0 +1,69 @@
+﻿@model IEnumerable<cloudrest.Models.Selection>
+
+@{ 
+    ViewBag.Title = "Index";
+}
+
+<h2>Selection</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create", null, new { @class = "btn btn-primary"})
+</p>
+
+<div class="container">
+    <div class="row">
+        @using (Html.BeginForm("Index", "Selection",FormMethod.Get))
+        {
+            <p>
+                @Html.TextBox("Searching...")
+                <button class="btn-info" type="submit">Search</button>
+            </p>
+        }
+    </div>
+</div>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Lesson.LessonTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Student.UserName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Student.UserRole)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Teacher.UserName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Teacher.UserRole)
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Lesson.LessonTitle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Student.UserName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Student.UserRole)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Teacher.UserName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Teacher.UserRole)
+            </td>
+            <td>
+                @Html.ActionLink("Edit","Edit", new { id = item.SelectionId}, new { @class = "btn btn-success"})
+                @Html.ActionLink("Delete","Delete", new { id = item.SelectionId}, new { onclick = $"return confirm('This Selection will be deleted. Are you sure?');", @class ="btn btn-dnager"})
+
+            </td>
+        </tr>
+    }
+</table>

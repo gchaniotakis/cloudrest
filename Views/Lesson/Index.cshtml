@@ -1,0 +1,46 @@
+﻿@model IEnumerable<cloudrest.Models.Lesson>
+
+@{
+    ViewBag.Title = "Index";
+    
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create", null , new { @class = "btn - btn primary"})
+</p>
+
+<div class= "container">
+    <div class="row">
+        @using (Html.BeginForm("Index", "Lessons", FormMethod.Get))
+        {
+            <p>
+                @Html.TextBox("Searching...")
+                <button class="btn-info" type="submit">Search</button>
+            </p>
+        }
+    </div>
+</div>
+
+<table class=" table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.LessonTitle)
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.LessonTitle)
+            </td>
+            <td>
+                @Html.ActionLink("Edit","Edit", new { id = item.LessonId}, new { @class="btn btn-success"})
+                @Html.ActionLink("Delete", "Delete", new { id = item.LessonId}, new { onclick = $"return confirm"})
+            </td>
+        </tr>
+    }
+</table>
+
