@@ -62,7 +62,7 @@ namespace cloudrest.Controllers
         {
             repo.Insert(user);
             repo.Save();            
-            return View(user);
+            return RedirectToAction("Index");
         }
 
         // GET: User/Edit/5
